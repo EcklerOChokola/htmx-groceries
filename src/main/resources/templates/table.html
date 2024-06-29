@@ -1,0 +1,23 @@
+<button hx-get="/button/refresh/loaded" hx-swap="outerHTML" hx-trigger="loaded from:body">
+	Loading ...
+</button>
+<button hx-get="/button/reset/loaded" hx-swap="outerHTML" hx-trigger="loaded from:body">
+	Loading ...
+</button>
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Count</th>
+		</tr>
+	</thead>
+	<tbody hx-get="/table/content" hx-swap="outerHTML" hx-trigger="revealed">
+		<tr><td colspan="2">Loading table data ...</td></tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<th>Total: </th>
+			<th hx-get="/table/stats" hx-trigger="loadStats from:body">Loading ...</th>
+		</tr>
+	</tfoot>
+</table>

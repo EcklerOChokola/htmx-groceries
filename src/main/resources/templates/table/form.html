@@ -1,0 +1,8 @@
+<td>
+	<input name="name" type="text" placeholder="Name..." form="table-form" required>
+</td>
+<td>
+	<input name="count" type="number" form="table-form" required>
+	<button hx-delete="/table/form" hx-target="#add-line" hx-swap="innerHTML">Reset</button>
+	<button hx-include="closest tr" hx-post="/table/entry" hx-swap="none">Confirm</button>
+</td>

@@ -1,0 +1,13 @@
+<tbody hx-get="/table/loading" hx-trigger="reloadTable from:body" hx-swap="outerHTML">
+	<tr th:each="item : ${items}">
+		<td th:text="${item.name}"></td>
+		<td th:text="${item.count}"></td>
+	</tr>
+	<tr id="add-line">
+		<td colspan="2" style="text-align: center;">
+			<button hx-get="/table/form" hx-target="#add-line" hx-swap="innerHTML">
+				Add an entry
+			</button>
+		</td>
+	</tr>
+</tbody>

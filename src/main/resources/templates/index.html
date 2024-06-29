@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<title>Home - EcklerOChokola</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+		<script src="https://unpkg.com/htmx.org@2.0.0"></script>
+		<link th:href="@{/main.css}" rel="stylesheet" />
+	</head>
+	<body>
+		<h1>Grocery list</h1>
+		<p>List of items to buy next time i go do my groceries</p>
+		<span class="loading" hx-get="/table" hx-trigger="revealed" hx-swap="outerHTML">Loading ...</span>
+	</body>
+</html>
